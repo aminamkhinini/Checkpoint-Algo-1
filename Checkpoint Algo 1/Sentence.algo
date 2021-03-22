@@ -1,0 +1,28 @@
+ALGORITHM Sentence
+VAR
+    str:string;
+    i:integer:=0;
+    nw:integer:=1;
+    nv:integer:=0;
+    nl:integer;
+BEGIN
+// length sentence
+REPEAT 
+nl:=1
+ write(str:="the sentecne ends with .")
+ Read(str)
+ nl=str.length
+UNTIL (str[nl]=".")
+// number of words and number of vowels
+FOR i FROM 0 TO str.length-1 STEP 1 DO
+IF (str[i]="") THEN
+    nw=nw+1;
+ELSE IF str[i]=["a","e","i","o","w","y"] THEN
+    nv=nv+1;
+END_IF
+END_FOR
+
+write("nw",number of words)
+write("nv",number of vowels)
+write("nl",length of Sentence)
+END
